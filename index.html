@@ -1,31 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"
-    <title> Primos</title>
-    <link rel="stylesheet" href="css/estilos.css"
-</head>
-<body>
-
-    <div id="contenidoCentro">
-        <div id="ContenidoContenedor">
-            <div id="ContenidoColumna1">
-                <h1 class="blanco">Numeros Primos del 1 al 100
-
-                </h1>
-            </div>
-        </div>
-
-        <div  id="ContenidoContenedor">
-            <div id="ContenidoColumna2">
-                <center><input type="button" onclick="primo()" value="Primo"></button></center>
-            </div>
-        </div>
-    </div><br>
-    <div id="resultado"></div>
-    
-</body>
-<script src="js/ctrl.js"></script>
+<html>
+ <head>
+ <title>Fecha</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="css/estilos.css">
+ </head>
+ <body>
+ <header>
+ <h1>Fecha</h1>
+ </header>
+ <form id="forma" action="javascript:procesa()">
+ <p><em>El borde azul indica obligatorio</em></p>
+ <p>
+ <label accesskey="P">
+ Fecha entre 2021-01-24 y 2021-12-24<br>
+ <input name="fecha" type="date" autofocus required
+ max="2021-12-24" min="2021-01-24">
+ </label>
+ <br><em>año-mes-día (ej. 2021-02-24)</em>
+ <br><output id="salidaFecha"></output>
+ </p>
+ <p>
+ <label accesskey="H">
+ Hora<br>
+ <input name="hora" type="time" required>
+ </label>
+ <br><em>horas:minutos (ej. 20:29)</em> <br><output id="salidaHora"></output>
+ </p>
+ <p>
+ <label accesskey="Y">
+ Fecha y Hora<br>
+ <input name="fechaYHora" type="datetime" required
+ value="2021-01-24T18:30-06:00">
+ </label>
+ <br><em>año-mes-díaThoras:minutosZonaHoraria</em>
+ <br><em>(ej. 2021-01-24T18:30-06:00)</em>
+ <br><output id="salidaFechaYHora"></output>
+ </p>
+ <p>
+ <label accesskey="L">
+ Fecha y Hora Local<br>
+ <input name="fechaYHoraLocal" type="datetime-local" required>
+ </label>
+ <br><em>año-mes-díaThoras:minutos</em>
+ <br><em>(ej. 2021-01-24T18:30-06:00)</em>
+ <br><output id="salidaFechaYHoraLocal"></output>
+ </p>
+ <p>
+ <label accesskey="S">
+ Semana<br>
+ <input name="semana" type="week" required>
+ </label>
+ <br><em>año-Wsemana (ej. 2021-W01)</em>
+ <br><output id="salidaSemana"></output>
+ </p>
+ <p>
+ <label accesskey="M">
+ Mes<br>
+ <input name="mes" type="month" required> </label>
+ <br><em>año-semana (ej. 2021-03)</em>
+ <br><output id="salidaMes"></output>
+ </p>
+ <p>
+ <input type="submit" value="Procesar" accesskey="P">
+ </p>
+ <p>
+ <input type="reset" value="Limpiar" accesskey="P">
+ </p>
+ </form>
+ <footer>
+ Copyright 2021 Fernanda González 
+ </footer>
+ <script src="js/CtrlFechas.js"></script>
+ </body>
 </html>
